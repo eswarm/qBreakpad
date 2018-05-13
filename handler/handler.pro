@@ -7,11 +7,6 @@ CONFIG += warn_on thread exceptions rtti stl
 QT -= gui
 QT += core network
 
-OBJECTS_DIR = _build/obj
-MOC_DIR = _build
-win32 {
-    DESTDIR = $$OUT_PWD
-}
 
 ### qBreakpad config
 include($$PWD/../config.pri)

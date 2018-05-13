@@ -6,5 +6,12 @@ HEADERS += \
     $$PWD/handler/QBreakpadHandler.h \
     $$PWD/handler/QBreakpadHttpUploader.h
 
+debug {
 LIBS += \
-    -L$$PWD/handler -lqBreakpad
+    -L$$PWD/handler-build-debug/debug -lqBreakpad
+}
+
+release {
+LIBS += \
+    -L$$PWD/handler-build-release/release -lqBreakpad
+}
