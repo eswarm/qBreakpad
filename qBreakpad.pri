@@ -6,12 +6,12 @@ HEADERS += \
     $$PWD/handler/QBreakpadHandler.h \
     $$PWD/handler/QBreakpadHttpUploader.h
 
-#debug {
-#LIBS += \
-#    -L$$PWD/handler-build-debug/debug -lqBreakpad
-#}
+CONFIG(debug, debug|release) {
+LIBS += \
+    -L$$PWD/handler-build-debug/debug -lqBreakpad
+}
 
-#release {
+CONFIG(release, debug|release) {
 LIBS += \
     -L$$PWD/handler-build-release/release -lqBreakpad
-#}
+}
